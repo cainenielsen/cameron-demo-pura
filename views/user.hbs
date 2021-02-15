@@ -1,0 +1,28 @@
+<h1>{{title}}</h1>
+<a href="/">[ Home ]</a>
+<a href="/users">[ Users ]</a>
+<h2>{{pageName}}</h2>
+<div>ID: <b><span id='user-id'></span></b></div>
+<div>Name: <b><span id='user-name'></span></b></div>
+<div>Email: <b><span id='user-email'></span></b></div>
+<div>Status: <b><span id='user-status'></span></b></div>
+<br />
+<br />
+<button onclick="deleteUser();">Delete</button>
+<a id='userEdit' href="/users/update-user?id=">[ Edit ]</a>
+<script src="/javascripts/index.js"></script>
+<script src="/javascripts/get-user.js"></script>
+<script src="/javascripts/delete-user.js"></script>
+<script>
+const fillEditId = function () {
+    var id = null;
+    const idField = document.getElementById('userEdit');
+
+    if (params.has("id")) {
+      id = params.get("id");
+      console.log(id);
+      idField.href += id;
+    }
+  }
+  fillEditId();
+</script>
