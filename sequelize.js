@@ -1,7 +1,7 @@
 const { Sequelize, Model, DataTypes } = require("sequelize");
 
 const sequelize = new Sequelize("postgres", "postgres", "FwwEsf8llsodI8Hz", {
-  host: "34.68.24.63",
+  host: "cameron-demo-pura.c2sqschuc6gt.us-east-1.rds.amazonaws.com",
   dialect: "postgres",
   define: {
     freezeTableName: true, // stops pluralizeation inference
